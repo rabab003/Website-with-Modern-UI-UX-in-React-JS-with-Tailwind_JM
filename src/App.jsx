@@ -1,14 +1,9 @@
-
 function App() {
-
   return (
     <>
-    <div className='text-center'>
-      hello world       
-    </div>
-      
+      <div className="text-deepGreen bg-deepGreen">hello world</div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
