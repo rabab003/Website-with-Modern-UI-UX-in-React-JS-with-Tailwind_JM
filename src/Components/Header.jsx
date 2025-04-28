@@ -25,7 +25,7 @@ export const Header = () => {
     <div
       className={`fixed w-full text-white top-0 z-50 bg-n-8 backdrop-blur-sm border-b
     border-n-6 lg:bg-[#0e0c15] lg:backdrop-blur-sm ${
-      openNavigation ? "bg-2" : "bg-1"
+      openNavigation ? "bg-[#0e0c15]" : "bg-[#13101d7f]"
     }`}
     >
       <div
@@ -46,6 +46,7 @@ export const Header = () => {
               <a
                 key={item.id}
                 href={item.url}
+                onClick={handelClick}
                 className={`block relative font-code text-2xl uppercase  text-[#6c7275] transition-colors hover:text-1 ${
                   item.onlyMobile ? "lg:hidden" : ""
                 } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold lg:leading-5 lg:hover:text-n-1`}
