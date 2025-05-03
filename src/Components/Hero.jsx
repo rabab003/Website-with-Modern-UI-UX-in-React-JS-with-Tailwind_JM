@@ -1,7 +1,14 @@
 import { curve, heroBackground, robot } from "../assets";
 import Section from "./Section";
+import Button from "./Btn";
+import { BackgroundCircles, ButtonLine, Gradient } from "./design/Hero";
+import { heroIcons } from "../constants";
+import { ScrollParallax } from "react-just-parallax";
+import { useRef } from "react";
 
 function Hero() {
+  const parallaxRef = useRef(null);
+
   return (
     <Section
       className="pt-12 -mt-[5.25]"
@@ -10,7 +17,7 @@ function Hero() {
       customPaddings
       id="hero"
     >
-      <div className="container relative">
+      <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
           <h1 className="h1 mb-6">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore,
@@ -40,11 +47,20 @@ function Hero() {
               <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                 <img
                   src={robot}
-                  className="w-full"
+                  className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y[23%]"
                   height={490}
                   width={1024}
                   alt=""
                 />
+                <ScrollParallax isAbsolutelyPositioned>
+                  <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-4 backdrop-blur border border-1 rounded-2xl xl:flex">
+                    {heroIcons.map((icon, index) => (
+                      <li className="p-5" key={index}>
+                        <img src={icon} width={24} height={25} alt={icon} />
+                      </li>
+                    ))}
+                  </ul>
+                </ScrollParallax>
               </div>
             </div>
           </div>
@@ -64,3 +80,5 @@ function Hero() {
 }
 
 export default Hero;
+
+//1:07:10
