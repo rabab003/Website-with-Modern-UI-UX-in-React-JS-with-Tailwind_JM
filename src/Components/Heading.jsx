@@ -13,5 +13,3 @@ const Heading = ({ className, title, text, tag }) => {
 };
 
 export default Heading;
-
-// 1:40:20
