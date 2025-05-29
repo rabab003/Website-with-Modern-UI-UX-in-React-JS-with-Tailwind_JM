@@ -4,6 +4,7 @@ import { Header } from "./Components/Header";
 import Hero from "./Components/Hero";
 import Benefits from "./Components/Benefits";
 import Collaboration from "./Components/Collaboration";
+import Services from "./Components/Services";
 
 function App() {
   return (
@@ -16,10 +17,11 @@ function App() {
       </div>
       <ButtonGradient />
       <Collaboration />
+      <Services />
     </>
   );
 }
 
 export default App;
 
-// 1:46:49
+// 2:09:08
